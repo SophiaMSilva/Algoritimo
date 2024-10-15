@@ -1,0 +1,41 @@
+programa
+{
+    // Declaração de variáveis
+    real matriz[2][4]
+    real vetor[4]
+    real r1, r2
+    inteiro i, j
+
+    funcao inicio()
+    {
+        escreva("Digite o numero para as linhas:\n")
+        para (i = 0; i < 2; i++)
+        {
+            para (j = 0; j < 4; j++)
+            {
+                escreva("Digite os números para a linha")
+                leia(matriz[i][j])
+            }
+        }
+
+        escreva("\n Digite os numeros para a coluna:\n")
+        para (i = 0; i < 4; i++)
+        {
+            escreva("Digite os números para a coluna: ")
+            leia(vetor[i])
+        }
+        r1 = 0
+        r2 = 0
+        para (j = 0; j < 4; j++)
+        {
+            r1 = r1 + (matriz[0][j] * vetor[j])
+        }
+        para (j = 0; j < 4; j++)
+        {
+            r2 = r2 + (matriz[1][j] * vetor[j])
+        }
+        
+        escreva("\nA primeira linha escalar com o vetor é: ", r1, "\n")
+        escreva("A segunda linha escalar com o vetor é: ", r2, "\n")
+    }
+}
